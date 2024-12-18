@@ -1,0 +1,33 @@
+<nav
+  class="fixed flex flex-row justify-between  w-full h-auto bg-white border-b-2 drop-shadow-2xl border-purple-600 px-4 sm:px-8 z-50">
+  <a href="#profile" class="flex items-center space-x-2">
+    <div class="flex flex-col">
+      <div class="text-4xl pl-5 sm:text-6xl font-semibold text-purple-600 font-serif">Jacob</div>
+      <!-- <div class="text-sm sm:text-md text-purple-600 w-auto ">
+        airways placement services
+      </div> -->
+    </div>
+  </a>
+
+  <button id="menu-toggle" class="block sm:hidden right-0 text-purple-600 text-3xl focus:outline-none" (click)="toggle()">
+    &#9776;
+  </button>
+
+  <div id="menu"
+    class="hidden sm:flex flex-col sm:flex-row sm:items-center sm:justify-between w-full sm:w-auto text-2xl text-purple-600 mt-4 ml-20 sm:mt-0">
+    <a href="#profile" class="px-3 py-3 font-sans font-semibold hover:shadow-2xl hover:shadow-purple-500 hover:bg-purple-600 hover:rounded-xl hover:text-white">Profile</a>
+    <a href="#skills" class="px-3 py-3 font-sans font-semibold hover:shadow-2xl hover:shadow-purple-500 hover:bg-purple-600 hover:rounded-xl hover:text-white">Skills</a>
+    <a href="#education" class="px-3 py-3 font-sans font-semibold hover:shadow-2xl hover:shadow-purple-500 hover:bg-purple-600 hover:rounded-xl hover:text-white">Education</a>
+    <a href="#projects" class="px-3 py-3 font-sans font-semibold hover:shadow-2xl hover:shadow-purple-500 hover:bg-purple-600 hover:rounded-xl hover:text-white">Projects</a>
+    <a href="#contact" class="px-3 py-3 font-sans font-semibold hover:shadow-2xl hover:shadow-purple-500 hover:bg-purple-600 hover:rounded-xl hover:text-white">Contact</a>
+  </div>
+
+
+</nav>
+<div class="bg-white sm:hidden flex fixed h-fit text-center text-purple-500 border-4 border-purple-500 w-40 right-2 top-20 z-30  flex-col" *ngIf ="menuView">
+  <a href="#profile" class="px-3 py-3 font-sans font-semibold hover:shadow-2xl hover:shadow-purple-500 hover:bg-purple-600 hover:rounded-xl hover:text-white border-2 border-purple-600">Profile</a>
+  <a href="#skills" class="px-3 py-3 font-sans font-semibold hover:shadow-2xl hover:shadow-purple-500 hover:bg-purple-600 hover:rounded-xl hover:text-white border-2 border-purple-600">Skills</a>
+  <a href="#education" class="px-3 py-3 font-sans font-semibold hover:shadow-2xl hover:shadow-purple-500 hover:bg-purple-600 hover:rounded-xl hover:text-white border-2 border-purple-600">Education</a>
+  <a href="#projects" class="px-3 py-3 font-sans font-semibold hover:shadow-2xl hover:shadow-purple-500 hover:bg-purple-600 hover:rounded-xl hover:text-white border-2 border-purple-600">Projects</a>
+  <a href="#contact" class="px-3 py-3 font-sans font-semibold hover:shadow-2xl hover:shadow-purple-500 hover:bg-purple-600 hover:rounded-xl hover:text-white border-2 border-purple-600">Contact</a>
+</div>
