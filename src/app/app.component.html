@@ -1,9 +1,24 @@
-<div class="h-full w-full bg-gray-50">
+<div class="h-full max-w-full mx-auto overflow-x-hidden bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
   <app-nav class="sticky top-0 z-50"></app-nav>
-    <app-profile></app-profile>
-    <app-skills></app-skills>
-    <app-education></app-education>
-    <app-project></app-project>
-    <app-contact></app-contact>
+  
+  <!-- Floating Theme Toggle Button -->
+  <button 
+    (click)="toggleTheme()" 
+    class="fixed bottom-8 right-8 z-40 p-4 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl border border-gray-200 dark:border-gray-600 transition-all duration-300 transform hover:scale-110 group">
+    <!-- Sun Icon (visible in dark mode) -->
+    <svg *ngIf="isDarkMode" class="w-6 h-6 text-yellow-500 group-hover:text-yellow-400 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+    </svg>
+    <!-- Moon Icon (visible in light mode) -->
+    <svg *ngIf="!isDarkMode" class="w-6 h-6 text-gray-700 group-hover:text-gray-900 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.06 7 9.54 0 4.48-2.94 8.27-7 9.54.95.3 1.95.46 3 .46 5.52 0 10-4.48 10-10S14.52 2 9 2z"/>
+    </svg>
+  </button>
+  
+  <app-profile></app-profile>
+  <app-skills></app-skills>
+  <app-education></app-education>
+  <app-project></app-project>
+  <app-contact></app-contact>
   <app-footer class="mt-10"></app-footer>
 </div>

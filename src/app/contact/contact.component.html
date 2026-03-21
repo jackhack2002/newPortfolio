@@ -1,44 +1,50 @@
-<div id="contact" class="flex flex-col w-full bg-slate-500 pt-28 pb-10">
+<div id="contact" class="flex flex-col w-full bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 min-h-screen py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 transition-all duration-500">
      <!-- Section Title -->
-     <div class="flex w-full" [class.bounce-in-right]="true">
-       <h1 class="mx-auto text-3xl font-bold text-white underline">CONTACT</h1>
-     </div>
+     <header class="text-center mb-12 sm:mb-16 lg:mb-20" [class.bounce-in-right]="true">
+       <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-800 dark:text-white mb-4 transition-colors duration-300">
+        Get In Touch
+      </h1>
+      <div class="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"></div>
+     </header>
    
      <!-- Contact Form Container -->
-     <div class="w-11/12 mx-auto mt-10 bg-gray-400 border-2 border-purple-400 shadow-2xl rounded-3xl shadow-purple-500 lg:w-2/3" [class.puff-in-center]="true">
-       <form action="https://formsubmit.co/jacobjabakumar2002@gmail.com" method="POST" class="p-8 lg:px-16">
+     <div class="w-full max-w-2xl mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-2xl overflow-hidden" [class.puff-in-center]="true">
+       <div class="bg-gradient-to-r from-purple-600 to-pink-600 p-6 sm:p-8">
+         <h2 class="text-2xl sm:text-3xl font-bold text-white text-center">Send Me a Message</h2>
+       </div>
+       <form action="https://formsubmit.co/jacobjabakumar2002@gmail.com" method="POST" class="p-6 sm:p-8 lg:p-12">
          <!-- Name Field -->
          <div class="mb-6">
-           <label for="name" class="block mb-2 text-lg font-medium text-gray-800">Name</label>
+           <label for="name" class="block mb-2 text-lg font-semibold text-gray-800 dark:text-white">Name</label>
            <input 
              type="text" 
              name="name" 
              id="name" 
-             class="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:border-purple-400 focus:ring-1 focus:ring-purple-400" 
+             class="block w-full px-4 py-3 text-gray-700 dark:text-gray-200 bg-gray-50 dark:bg-gray-700 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:border-purple-500 focus:ring-4 focus:ring-purple-200/50 dark:focus:ring-purple-800/50 hover:border-purple-400 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 cursor-pointer relative" 
              placeholder="Enter your name" 
              required />
          </div>
    
          <!-- Email Field -->
          <div class="mb-6">
-           <label for="email" class="block mb-2 text-lg font-medium text-gray-800">Email Address</label>
+           <label for="email" class="block mb-2 text-lg font-semibold text-gray-800 dark:text-white">Email Address</label>
            <input 
              type="email" 
              name="email" 
              id="email" 
-             class="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:border-purple-400 focus:ring-1 focus:ring-purple-400" 
+             class="block w-full px-4 py-3 text-gray-700 dark:text-gray-200 bg-gray-50 dark:bg-gray-700 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:border-purple-500 focus:ring-4 focus:ring-purple-200/50 dark:focus:ring-purple-800/50 hover:border-purple-400 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 cursor-pointer relative" 
              placeholder="Enter your email" 
              required />
          </div>
    
          <!-- Message Field -->
          <div class="mb-6">
-           <label for="message" class="block mb-2 text-lg font-medium text-gray-800">Message</label>
+           <label for="message" class="block mb-2 text-lg font-semibold text-gray-800 dark:text-white">Message</label>
            <textarea 
              name="message" 
              id="message" 
              rows="4" 
-             class="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:border-purple-400 focus:ring-1 focus:ring-purple-400" 
+             class="block w-full px-4 py-3 text-gray-700 dark:text-gray-200 bg-gray-50 dark:bg-gray-700 border-2 border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:border-purple-500 focus:ring-4 focus:ring-purple-200/50 dark:focus:ring-purple-800/50 hover:border-purple-400 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 cursor-pointer relative" 
              placeholder="Enter your message" 
              required></textarea>
          </div>
@@ -47,11 +53,10 @@
          <div>
            <button 
              type="submit" 
-             class="w-full px-6 py-2.5 bg-purple-600 text-white font-medium text-lg uppercase rounded-lg shadow-md hover:bg-purple-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-purple-400 active:bg-purple-800 transition ease-in-out duration-150">
-             Send
+             class="w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold text-lg rounded-lg shadow-lg hover:from-purple-700 hover:to-pink-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-purple-400 active:scale-95 transition-all duration-200 cursor-pointer">
+             Send Message
            </button>
          </div>
        </form>
      </div>
    </div>
-   

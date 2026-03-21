@@ -1,94 +1,70 @@
-<div id="projects" class="flex flex-col bg-gray-500 pt-20">
-     <h1 class="text-4xl font-serif font-semibold text-white text-center">PROJECTS</h1>
-   
-     <div class="grid gap-10 mx-auto mt-10 sm:grid-cols-1 lg:grid-cols-2">
-       <!-- Project 1 -->
-       <div class="flex flex-col items-center lg:flex-row">
-         <div [class.slide-in-right]="true" class="lg:w-1/2">
-           <img class="rounded-2xl w-96 h-80" src="aps_project.jpg" alt="Airways Placement Services Project">
-         </div>
-         <div [class.slide-in-elliptic-right-bck]="true"
-              class="flex flex-col bg-slate-400 rounded-2xl p-5 lg:w-1/2">
-           <h1 class="text-2xl font-bold tracking-tight text-gray-900 underline text-center">
-             Business Portfolio for Airways Placement Services
-           </h1>
-           <p class="mt-5 text-lg font-medium text-gray-800">
-             Created a professional business portfolio for a startup company with sections such as Home, Job Description,
-             About Us (Vision and Mission), and Contact Us. It features a user-friendly contact form and streamlined data
-             collection via Google Form navigation.
-           </p>
-           <div class="flex justify-center mt-5 space-x-5">
-             <a href="https://github.com/jackhack2002/airwayplacementservices.git" target="_blank"
-                class="px-3 py-2 text-white bg-blue-700 rounded-lg">View Code</a>
-             <a href="https://airwaysplacementservices.netlify.app/" target="_blank"
-                class="px-3 py-2 text-white bg-blue-700 rounded-lg">View Site</a>
-           </div>
-         </div>
-       </div>
-   
-       <!-- Project 2 -->
-       <div class="flex flex-col items-center lg:flex-row">
-         <div [class.slide-in-right]="true" class="lg:w-1/2">
-           <img class="rounded-2xl w-96 h-80" src="jscart.jpg" alt="J's Cart Project">
-         </div>
-         <div [class.slide-in-elliptic-right-bck]="true"
-              class="flex flex-col bg-slate-400 rounded-2xl p-5 lg:w-1/2">
-           <h1 class="text-2xl font-bold tracking-tight text-gray-900 underline text-center">
-             J's Cart: E-commerce Website
-           </h1>
-           <p class="mt-5 text-lg font-medium text-gray-800">
-             Developed "J's Cart," an e-commerce website with features like product catalog, cart management, secure
-             payment processing, and responsive design.
-           </p>
-           <div class="flex justify-center mt-5 space-x-5">
-             <a href="https://github.com/jackhack2002/J-s-Cart.git" target="_blank"
-                class="px-3 py-2 text-white bg-blue-700 rounded-lg">View Code</a>
-             <a href="https://jackhack2002.github.io/JsCarts/" target="_blank"
-                class="px-3 py-2 text-white bg-blue-700 rounded-lg">View Site</a>
-           </div>
-         </div>
-       </div>
-   
-       <!-- Project 3 -->
-       <div class="flex flex-col items-center lg:flex-row">
-         <div [class.slide-in-right]="true" class="lg:w-1/2">
-           <img class="rounded-2xl w-96 h-80" src="port-folio-logo.png" alt="Portfolio Project">
-         </div>
-         <div [class.slide-in-elliptic-right-bck]="true"
-              class="flex flex-col bg-slate-400 rounded-2xl p-5 lg:w-1/2">
-           <h1 class="text-2xl font-bold tracking-tight text-gray-900 underline text-center">
-             Portfolio Using HTML and TailwindCSS
-           </h1>
-           <p class="mt-5 text-lg font-medium text-gray-800">
-             Designed a simple and responsive portfolio using a utility-first CSS framework.
-           </p>
-           <div class="flex justify-center mt-5">
-             <a href="https://port-folio-tailwind.netlify.app/" target="_blank"
-                class="px-3 py-2 text-white bg-blue-700 rounded-lg">View Site</a>
-           </div>
-         </div>
-       </div>
-   
-       <!-- Project 4 -->
-       <div class="flex flex-col items-center lg:flex-row">
-         <div [class.slide-in-right]="true" class="lg:w-1/2">
-           <img class="rounded-2xl w-96 h-80" src="projectlogo1.jpg" alt="Digital Ambulance Service App">
-         </div>
-         <div [class.slide-in-elliptic-right-bck]="true"
-              class="flex flex-col bg-slate-400 rounded-2xl p-5 lg:w-1/2">
-           <h1 class="text-2xl font-bold tracking-tight text-gray-900 underline text-center">
-             Digital Ambulance Service App
-           </h1>
-           <p class="mt-5 text-lg font-medium text-gray-800">
-             A user-friendly app for requesting real-time ambulance services, connecting users with nearby providers for
-             efficient emergency care.
-           </p>
-           <div class="flex justify-center mt-5">
-             <a href="https://github.com/jackhack2002/Emergency-Ambulance-Service-.git" target="_blank"
-                class="px-3 py-2 text-white bg-blue-700 rounded-lg">View Code</a>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
-   
+<section id="projects" class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 transition-all duration-500">
+  <div class="max-w-7xl mx-auto">
+    <!-- Header -->
+    <header class="text-center mb-12 sm:mb-16 lg:mb-20">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-800 dark:text-white mb-4 transition-colors duration-300">
+        Featured Projects
+      </h1>
+      <div class="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"></div>
+    </header>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
+      <article *ngFor="let project of projects" 
+               class="group bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden cursor-pointer">
+        
+        <!-- Project Image -->
+        <div class="relative h-48 sm:h-56 overflow-hidden bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/30 dark:to-pink-900/30">
+          <img [src]="project.image" 
+               [alt]="project.title" 
+               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </div>
+
+        <!-- Project Content -->
+        <div class="p-6 sm:p-8">
+          <!-- Title -->
+          <h2 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-3 line-clamp-2">
+            {{project.title}}
+          </h2>
+
+          <!-- Description -->
+          <p class="text-gray-600 dark:text-gray-300 text-sm sm:text-base mb-4 line-clamp-3">
+            {{project.description}}
+          </p>
+
+          <!-- Tags -->
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span *ngFor="let tag of project.tags" 
+                  class="px-3 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-medium rounded-full">
+              {{tag}}
+            </span>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex gap-3 sm:gap-4">
+            <a *ngIf="project.links.github" 
+               [href]="project.links.github" 
+               target="_blank"
+               class="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors duration-200 text-sm font-medium">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+              View Code
+            </a>
+            
+            <a *ngIf="project.links.live" 
+               [href]="project.links.live" 
+               target="_blank"
+               class="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-sm font-medium">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+              </svg>
+              Live Demo
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

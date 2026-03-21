@@ -1,31 +1,57 @@
-<div id="profile" class="h-fit py-32 w-full flex items-center justify-center bg-gray-100">
-     <div class="mx-auto max-w-4xl px-4 text-center font-serif text-purple-600">
-       <p class="text-3xl sm:text-4xl font-extrabold">Hi, I am</p>
-       <p class="mt-3 text-5xl sm:text-6xl font-bold tracking-in-contract-bck-top">Jacob</p>
-       <p class="mt-2 text-lg sm:text-2xl">Angular Developer</p>
-       <a href="Jacob_resume.pdf" target="_blank">
-         <button class="px-4 py-2 mt-6 text-white transition duration-300 ease-in-out bg-purple-500 rounded-2xl hover:shadow-lg hover:shadow-purple-500 hover:-translate-y-1 hover:scale-110 hover:bg-purple-700">
-           Download Resume
-         </button>
-       </a>
-       <div class="flex justify-center gap-10 pt-10">
-         <a href="https://github.com/jackhack2002">
-           <svg xmlns="http://www.w3.org/2000/svg" class="text-purple-700 transition duration-300 ease-in-out h-10 sm:h-14 hover:-translate-y-1 hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-             <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-           </svg>
-         </a>
-         <a href="https://www.linkedin.com/in/jacobjabakumars732">
-           <svg xmlns="http://www.w3.org/2000/svg" class="text-purple-700 transition duration-300 ease-in-out h-10 sm:h-14 hover:-translate-y-1 hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-             <rect x="2" y="9" width="4" height="12"></rect>
-             <circle cx="4" cy="4" r="2"></circle>
-           </svg>
-         </a>
-       </div>
-       <div class="pt-10 text-lg sm:text-xl font-semibold font-sans">
-         <p>Mobile: {{mobile}}</p>
-         <p>Email: {{mailId}}</p>
-       </div>
-     </div>
-   </div>
-   
+<section id="profile" class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 flex items-center justify-center transition-all duration-500">
+  <div class="mx-auto max-w-4xl text-center font-serif">
+    <!-- Header -->
+    <header class="mb-12">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 dark:text-white mb-4 transition-colors duration-300">Hi, I am</h1>
+      <div class="relative inline-block">
+        <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-in-contract-bck-top bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent transition-all duration-300">Jacob</h2>
+        <div class="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 rounded-full transition-all duration-300"></div>
+      </div>
+      <p class="mt-4 text-xl sm:text-2xl md:text-3xl text-gray-700 dark:text-gray-200 font-medium transition-colors duration-300">Angular Developer</p>
+    </header>
+
+    <!-- CTA Button -->
+    <div class="mb-12">
+      <a href="Jacob_resume.pdf" target="_blank" class="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-white bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-500 dark:to-pink-500 rounded-2xl shadow-lg hover:shadow-xl hover:from-purple-700 hover:to-pink-700 dark:hover:from-purple-600 dark:hover:to-pink-600 transform hover:-translate-y-1 transition-all duration-300 font-semibold text-lg cursor-pointer">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+        Download Resume
+      </a>
+    </div>
+
+    <!-- Social Links -->
+    <div class="flex justify-center gap-6 sm:gap-8 mb-12">
+      <a href="https://github.com/jackhack2002" class="group bg-white dark:bg-gray-800/50 backdrop-blur-sm p-4 rounded-2xl hover:bg-gray-50 dark:hover:bg-gray-700/50 border border-gray-200 dark:border-gray-600 transition-all duration-300 transform hover:scale-110 shadow-md hover:shadow-lg cursor-pointer">
+        <svg class="w-8 h-8 sm:w-10 sm:h-10 text-gray-700 dark:text-gray-300 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/jacobjabakumars732" class="group bg-white dark:bg-gray-800/50 backdrop-blur-sm p-4 rounded-2xl hover:bg-gray-50 dark:hover:bg-gray-700/50 border border-gray-200 dark:border-gray-600 transition-all duration-300 transform hover:scale-110 shadow-md hover:shadow-lg cursor-pointer">
+        <svg class="w-8 h-8 sm:w-10 sm:h-10 text-gray-700 dark:text-gray-300 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+          <rect x="2" y="9" width="4" height="12"></rect>
+          <circle cx="4" cy="4" r="2"></circle>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="bg-white dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 sm:p-8 max-w-md mx-auto border border-gray-200 dark:border-gray-600 shadow-lg transition-all duration-300">
+      <div class="space-y-4 text-gray-700 dark:text-gray-200">
+        <div class="flex items-center justify-center gap-3">
+          <svg class="w-5 h-5 text-purple-600 dark:text-purple-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+          </svg>
+          <p class="break-all transition-colors">{{mobile}}</p>
+        </div>
+        <div class="flex items-center justify-center gap-3">
+          <svg class="w-5 h-5 text-purple-600 dark:text-purple-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          <p class="break-all transition-colors">{{mailId}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
